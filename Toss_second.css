@@ -62,7 +62,7 @@ body {
 
 
 
-.section {
+.section1 {
     display:flex;
     flex-direction: column;
     background-color: rgb(24, 23, 28);
@@ -118,6 +118,16 @@ body {
     margin-top:10px;
     font-size: 50px;
     color: rgb(229, 229, 231);
+}
+
+.section2 {
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(24, 23, 28);
+    border-radius: 50px;
+    height: 410px;
+    border-color: rgb(24, 23, 28);
+    margin-top: 30px;
 }
 
 #index{

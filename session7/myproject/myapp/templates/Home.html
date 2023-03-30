@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team.leader Choi's Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'Home.css' %}" />
+
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <div id="logo">
+                <strong>Dare 2 Fail</strong>
+                <P style="color:blue">.</P>
+            </div>
+
+            <div id="barcontainer">
+                <ul id="menubar">
+                    <li id="Home">
+                        <a href="{% url 'Home' %}"><strong>Home</strong></a>
+
+                    </li>
+
+                    <li>
+                        <a href="{% url 'project' %}"><strong>project</strong></a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+
+
+
+    <div id="section">
+        <div id="article">
+            <strong> hi. my name is </strong><strong style="color:blue">Choi Seong Ho.</strong>
+            <br /> <br />
+            <strong> I create business value,
+            </strong><br />
+            <strong style="color:blue"> from Next,
+            </strong> <br/>
+            <strong> impacting <strong style="color:blue"> society </strong>
+            </strong><br />
+            <strong> for  <strong style="color:blue"> happiness </strong>
+            </strong><br />
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+
+body{
+    font-family: Toss Product Sans,Tossface,-apple-system,BlinkMacSystemFont,Bazier 
+    Square,Noto Sans KR,Segoe UI,Apple SD Gothic Neo,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+  }
+
+#container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: space-between;
+    z-index: 999;
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+
+#menuicon {
+    display: inline-block;
+    justify-items: center;
+    align-items: center;
+}
+
+#menu {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#logo {
+    margin: auto;
+font-size: 20px;
+
+}
+
+#newpost {
+    margin-right: 20px;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+#homeimg{
+    padding-top: 50px;
+}
+
+#homeimgcontent{
+    position: relative;
+    display: block;
+    height: 300px;
+    width: 100%;
+    margin: 0px;
+}
+
+  
+#hometext {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 이미지 중앙에 위치하도록 조정 */
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    z-index: 1; /* 텍스트가 이미지 위에 위치하도록 z-index 값을 설정 */
+  }
+
+#Next {
+    color: rgb(252, 165, 67)
+}
+
+.categoryContainer {
+    display: flex;
+    flex-direction: row;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+
+.categoryItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+    <title>Mr. Choi's Blog</title>
+</head>
+<body>
+    
+    <div id="container">
+        <nav>
+            <div id="menuicon">
+                <img id="menu" src="../static/image/list.png" />
+            </div>
+
+            <div id="logo">
+                <a href="{% url 'Home' %}"><strong>Mr. Choi's Blog</strong></a>
+            </div>
+
+            <div id="newpost">
+                <a href="{% url 'new' %}"><strong>New Post</strong></a>
+            </div>
+        </nav>
+
+        <div id="homeimg">
+                <img id="homeimgcontent" src="../static/image/home.png" />
+        </div>
+
+        <div id="hometext">
+            <strong>Who will be NE</strong><strong id="Next">X</strong><strong>T Unicorn </strong>
+        </div>
+    </div>
+
+    <div class="categoryContainer">
+        <div class = "categoryItem">
+            <div class="imgShow">
+                <img src="../static/image/workout.jpg" width="200px" height="200px">
+            </div>
+            <a href="{%url 'category' 'Exercise'%}"><strong>Exercise [{{Exercise_len}}]</strong>
+                <br>
+                운동에 관한 이야기입니다
+            </a>
+        </div>
+        
+        <div class = "categoryItem">
+            <div class="imgShow">
+                <img src="../static/image/startup.jpg" width="200px" height="200px">
+            </div>
+            <a href="{%url 'category' 'Startup'%}"><strong>Start-up [{{Startup_len}}]</strong>
+                <br>
+                창업에 관한 이야기입니다
+            </a>
+
+        </div>
+        <div class = "categoryItem">
+            <div class="imgShow">
+                <img src="../static/image/food.jpg" width="200px" height="200px">
+            </div>
+            <a href="{%url 'category' 'Food'%}"><strong>Food [{{Food_len}}]</strong> <br>
+            음식에 관한 이야기입니다
+            
+            
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

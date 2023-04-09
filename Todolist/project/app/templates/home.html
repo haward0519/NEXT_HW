@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}">
+    <title>Todolist</title>
+</head>
+
+<body>
+    <h1 class="title"> Mr. choi's To-do list</h1>
+
+    <div class="container">
+
+        <div class="posts_box">
+
+            {% for post, dday in posts %}
+            <div class="post_wrapper">
+                <span class="post_title">D - {{ dday }}</span>
+                <span class="post_content">{{ post.title }}</span>
+                <a href="{% url 'detail' post.pk %}">more</a>           
+            </div>
+            {% endfor %}
+        </div>
+        <a  id="post-button" href="{% url 'new' %}"> 작성</a>
+    </div>
+</body>
+
+</html>

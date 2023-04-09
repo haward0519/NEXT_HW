@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'update.css' %}">
+    <title>수정하기</title>
+</head>
+
+<body>
+    <h1 class="title"> Mr. choi's To-do list</h1>
+    
+    <form action="" method="post"> {% csrf_token %}
+    <div class="container">
+
+        <div class="posts_box">
+            <div class="post_title">
+                <strong> 할 일: </strong> <input type="text" name="title" /> 
+            </div>
+        
+            <div class="post_deadline"> 
+               <span>Date: <input type="date" name="date" /></span>
+            </div>
+    
+            <div class="post_content">
+                <textarea name="content" cols="50" rows="20"></textarea>
+            </div>
+        </div>
+       
+        <button class="post-button" type="submit">수정완료</button>
+    </div>
+</form>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'detail.css' %}">
+    <title>상세페이지</title>
+</head>
+
+
+
+<body>
+
+    <h1 class="title"> Mr. choi's To-do list</h1>
+
+    <div class="container">
+
+        <div class="posts_box">
+            <div class="post_title">
+                <strong> 할 일: </strong> <span> {{ post.title }}</span>
+            </div>
+        
+            <div class="post_deadline"> 
+               <span>Date: {{ post.date }} (D-{{ dday }})</span>
+            </div>
+    
+            <div class="post_content">
+                <p> {{ post.content}}</p>
+            </div>
+        </div>
+       
+        <a class="post-button" href="{% url 'home' %}"> 전체 다시보기 </a>
+        <a class="post-button" href="{% url 'update' post.pk %}"> 수정하기 </a>
+        <a class="post-button" href="{% url 'delete' post.pk %}"> 삭제하기 </a>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+.articletitle {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.articlecontent{
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+.commentWrapper{
+    margin-top: 100px;
+}
+
+.recommentWrapper{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    justify-content: right;
+}
+
+.commentinput {
+   width : 40%;
+}
+
+.recommentinput {
+    width : 40%;
+    
+ }
+
+ commentList{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items:self-start;
+}
+
+.recommentList{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items:self-end;
+}
+
+#back{
+
+    font-size: 15px;
+    font-weight: 300;
+    text-align: right;
+    margin-top: 30px;
+}

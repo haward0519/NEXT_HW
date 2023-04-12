@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'home.css' %}" />
+{% endblock %}
+
+{% block title %} Mr.choi's Blog {% endblock %}
+</head>
+<body>
+
+
+    {% block homepageimg %}
+    <div id="homeimg">
+        <img id="homeimgcontent" src="../static/image/home.png" />
+    </div>
+
+    <div id="hometext">
+        <strong>Who will be NE</strong><strong id="Next">X</strong><strong>T Unicorn </strong>
+    </div>
+</div>
+    {% endblock %}
+
+
+
+
+    {% block MainContainer %}
+    <div class="categoryContainer">
+        <div class = "categoryItem">
+            <div class="imgShow">
+                <img src="../static/image/workout.jpg" width="200px" height="200px">
+            </div>
+            <a href="{%url 'category' 'Exercise'%}"><strong>Exercise [{{Exercises_count}}]</strong>
+                <br>
+                운동에 관한 이야기입니다
+            </a>
+        </div>
+        
+        <div class = "categoryItem">
+            <div class="imgShow">
+                <img src="../static/image/startup.jpg" width="200px" height="200px">
+            </div>
+            <a href="{%url 'category' 'Startup'%}"><strong>Start-up [{{Startups_count}}]</strong>
+                <br>
+                창업에 관한 이야기입니다
+            </a>
+
+        </div>
+        <div class = "categoryItem">
+            <div class="imgShow">
+                <img src="../static/image/food.jpg" width="200px" height="200px">
+            </div>
+            <a href="{%url 'category' 'Food'%}"><strong>Food [{{Foods_count}}]</strong> <br>
+            음식에 관한 이야기입니다.
+            </a>
+        </div>
+    </div>
+        {% endblock %}
+
+        
+
+</body>
+</html>

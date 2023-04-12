@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}" />
+{% endblock %}
+    <title>{{ article.title }}</title>
+</head>
+<body>
+
+
+    {% block MainContainer %}
+
+    <div class="articletitle">
+        <div>{{ article.title }}</div>    
+    </div>
+    <div class="articlecontent">
+        <div>{{ article.content }}</div>
+    </div>
+    <a id="back" href="{% url 'list' %}">Back</a>
+    <form action="{% url 'comment' article.id %}" method="post" class="commentWrapper">
+        {% csrf_token %}
+        <input class="commentinput" type="text" name="content" placeholder="댓글을 입력해주세요!">
+        <button type="submit">등록하기</button>
+    </form>
+
+    {% for comment in article.comments.all %}
+    <ul class="commentList">
+    
+        <li class="flex">
+            <span>{{ comment.content }}</span>
+            <a href="{% url 'delete_comment' article.id comment.id %}">삭제</a>
+        </li>
+        
+    </ul>
+
+    <form action="{% url 'recomment' article.id comment.id %}" method="post" class="recommentWrapper">
+        {% csrf_token %}
+        <input class="recommentinput" type="text" name="content" placeholder="댓댓글을 입력해주세요!">
+        <button type="submit">등록하기</button>
+    </form>
+
+    <ul class="recommentList">
+        {% for recomment in comment.recomments.all %}
+        <li class="flex">
+            <span>{{ recomment.content }}</span>
+            <a href="{% url 'recomment_delete' article.id comment.id recomment.id %}">삭제</a>
+        </li>
+        {% endfor %}
+
+    </ul>
+    {% endfor %}
+
+    {% endblock %}
+</body>
+</html>

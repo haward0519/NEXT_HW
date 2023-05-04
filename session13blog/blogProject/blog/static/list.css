@@ -1,0 +1,13 @@
+h2 {
+    font-size: 40px;
+    text-decoration: underline;
+}
+
+.newpostsecond{
+    margin-top: 50px;
+    font-size: 15px;
+}
+
+li{
+    list-style: decimal;
+}

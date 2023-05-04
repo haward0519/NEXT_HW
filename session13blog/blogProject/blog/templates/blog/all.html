@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/all.css' %}">
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for post in user.posts.all %}
+    <li>
+        <h3><a href="{% url 'blog:detail' post.pk %}">{{ post.title }}</a></h3>
+        <div class="infoWrapper">
+            <span>Create By {{ post.author }}</span>
+            <span>Update At {{ post.update_dt }}</span>
+        </div>
+        <p>{{ post.content }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

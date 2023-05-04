@@ -1,0 +1,28 @@
+{% extends 'blog/base.html' %}
+
+    <title>New Article</title>
+</head>
+
+<body>
+
+    {% block MainContainer %}
+    <h2> 글쓰기 페이지</h2>
+    <form action="/new" method="post"> {% csrf_token %}
+        <div class = "inputContainer">
+            <div class="inputTitle">카테고리</div>
+            <input class="smallBox" type="text" name="category"/>
+        </div>
+        <div>
+            <div>글 제목</div>
+            <input type="text" name="title" />
+        </div>
+        <div>
+            <div>글 내용</div>
+            <textarea name="content" cols="30" rows="10"></textarea>
+        </div>
+        <button type="submit">작성완료</button>
+    </form>
+    {% endblock %}
+</body>
+
+</html>

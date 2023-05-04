@@ -1,0 +1,42 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'detail.css' %}" />
+{% endblock %}
+    <title>{{ article.title }}</title>
+</head>
+<body>
+
+
+    {% block MainContainer %}
+
+    <div class="articletitle">
+        <div>{{ article.title }}</div>    
+    </div>
+    <div class="articlecontent">
+        <div>{{ article.content }}</div>
+    </div>
+    <a id="back" href="{% url 'blog:list' %}">Back</a>
+    <form action="{% url 'blog:comment' article.id %}" method="post" class="commentWrapper">
+        {% csrf_token %}
+        <input class="commentinput" type="text" name="content" placeholder="댓글을 입력해주세요!">
+        <button type="submit">등록하기</button>
+    </form>
+    
+    {% for comment in article.comments.all %}
+    <ul class="commentList">
+
+        <li class="flex">
+            <span>{{ comment.content }}</span>
+            <a href="{% url 'blog:delete_comment' article.id comment.id %}">삭제</a>
+        </li>
+        
+    </ul>
+
+    {% endfor %}
+
+
+
+    {% endblock %}
+</body>
+</html>

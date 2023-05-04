@@ -1,0 +1,98 @@
+body{
+    font-family: Toss Product Sans,Tossface,-apple-system,BlinkMacSystemFont,Bazier 
+    Square,Noto Sans KR,Segoe UI,Apple SD Gothic Neo,Roboto,Helvetica Neue,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+
+  }
+
+#container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+nav {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    right: 0;
+    align-items: space-between;
+    z-index: 999;
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+
+#menuicon {
+    display: inline-block;
+    justify-items: center;
+    align-items: center;
+}
+
+#menu {
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#logo {
+    margin: auto;
+font-size: 20px;
+
+}
+
+#newpost {
+    margin-right: 20px;
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+
+.MainContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+}
+
+footer {
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 40px 0;
+    font-size: 14px;
+    border-top: 1px solid #e0e0e0;
+    justify-content: space-between;
+  }
+
+.footercontainer {
+    margin-top : 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    justify-content: space-between;
+}
+  
+  footer h4 {
+    margin-bottom: 0;
+  }
+  
+  footer p {
+    margin-top: 0;
+  }
+  
+
+  

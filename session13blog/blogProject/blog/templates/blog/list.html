@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'list.css' %}" />
+{% endblock %}
+    <title>Article list</title>
+</head>
+<body>
+    
+    <ul>
+        {% block MainContainer %}
+
+        <h2>{{category_kind_templates}} list</h2>
+        {% for article in categorized_articles %}
+        <li><a href="{% url 'blog:detail' article.id %}"> {{ article.title }} </a> </li>
+        {% endfor %}
+
+    </ul>
+    <a class="newpostsecond" href="{% url 'blog:new' %}">글쓰러가기</a>
+    {% endblock %}
+    
+</body>
+</html>
